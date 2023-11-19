@@ -37,7 +37,7 @@ Ps:For convenience, I code on DEV C++5.11 with Windows10 ususally.
 There are many different characters and equipment you can pick for various cases. However, you may not make a good usage of such set of equipments, before you are familiar with the way to engage with the enimies. At this time, a numerical simulation of damage may help you to evaluate if the combination is fitful enough for your expectation. 
 Especially, when you wonder the effect of some complex operation that you can not finish in game now, test theoretical process or operation by this project, then you can see the practical damage immediately.
 
-Thank you also to 圈儿 for providing the C code for accurately calculating damage values.
+Here I must Thank you to 圈儿 also, for providing the C code for accurately calculating damage values.
 
 ## Install
 
