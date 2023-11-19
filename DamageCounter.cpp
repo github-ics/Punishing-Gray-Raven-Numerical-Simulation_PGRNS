@@ -14,11 +14,10 @@ void Damcounter(Member& member, Skill* process,const int steps, int* Damage)
     for (int i = 0; i<steps; ++i) 
 	{
         // Apply buff changes from the skill
-        printf("%d\n",i);
+        //printf("%d\n",i);
         process[i].applyBuff(member);
 
         // Calculate damage and store in Damage array
-        printf("%lf\n",process[i].buffChange[0]);
         Damage[i] = SkillDam(member,process[i]);
     }
 }
@@ -56,10 +55,10 @@ int SkillDam(Member& member, Skill skill)
 		{
 			sum=sum+x;
 		}
-		printf("a%lf\n",a[i]);
+		//printf("a%lf\n",a[i]);
 	}
 	sum=ceil(sum*a[7]);
-	printf("sum:%lf\n",sum);
+	//printf("sum:%lf\n",sum);
 	
 	return (int)sum;
 }
