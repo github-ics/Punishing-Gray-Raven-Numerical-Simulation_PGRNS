@@ -67,5 +67,5 @@ Note: If editing the projrct, please push your improvement of program to testBra
 
 [apache](http://www.apache.org/licenses/LICENSE-2.0)
 
-Note: read the detials by the link if you want to know how "open" it is.
+Note: read the details by the link if you want to know how "open" it is.
 
