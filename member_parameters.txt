@@ -6,3 +6,14 @@
 1
 1
 1
+
+
+------------
+the meaning of each line
+ATK
+Buff1
+.
+.
+.
+.
+Buff7
