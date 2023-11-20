@@ -9,7 +9,7 @@
 
 
 ------------
-the meaning of each line:
+the meaning of each line, attention that the value of buffs is in percentage:
 
 ATK
 Buff1
