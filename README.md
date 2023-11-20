@@ -6,7 +6,7 @@
 ## About The Project
 
 
-It is used to compute the damage for Punish:Gray Raven. Now it based on c++11, and allows input the data about the game with ".txt" file.
+It is used to compute the damage for Punish:Gray Raven. Now it based on c++11, and allows input the data about the game with ".txt" file or excel file.
 
 
 
