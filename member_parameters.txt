@@ -9,7 +9,8 @@
 
 
 ------------
-the meaning of each line
+the meaning of each line:
+
 ATK
 Buff1
 .
