@@ -54,6 +54,8 @@ Sothat, you needn't edit any C++ code.
 ## Contributing
 Welcome for players who is into the PGR and good at coding simulation programs.
 
+This project accepts using Ai-assisted programming, but if you directly use tools such as GPT to code, it is best to explain the situation when submitting to ensure compatibility and robustness.
+
 Note: If editing the projrct, please push your improvement of program to testBranch!!!
 
 >small note:
