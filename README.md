@@ -48,8 +48,61 @@ Now it only depends on C++11.
 
 ## Usage
 
-If you are not good at coding, you can input the value of ATK and other parameters of buffs by txt file, which has the same format with "member_parameters.txt". 
-Sothat, you needn't edit any C++ code.
+This C++ project is a simple game damage simulator that allows users to model and simulate damage calculations based on character attributes, buffs, and skills. The project is organized into three main classes: `Member`, `Skill`, and a set of sub-functions.
+
+### Classes Overview
+
+#### `Member` Class
+
+The `Member` class represents a character in the game. It includes attributes such as Attack (ATK) and an array of buffs that can be modified independently. Buffs play a crucial role in determining damage outcomes.
+
+- **Attributes:**
+  - `ATK`: Initial Attack power of the character.
+  - `buff`: An array representing different buffs affecting the character.
+
+- **Methods:**
+  - `initializeFromFile(filename)`: Initializes member parameters (ATK and buffs) from a text file.
+  - `initializeFromExcel(filename)`: Initializes member parameters (ATK and buffs) from an Excel file.
+
+#### `Skill` Class
+
+The `Skill` class represents a character's skill, including properties such as multiplier, time cost, and buff changes. Skills are stored in a linked list, allowing users to define a sequence of skills for simulation.
+
+- **Attributes:**
+  - `multiplier`: Damage multiplier of the skill.
+  - `timeCost`: Time cost associated with using the skill.
+  - `buffChange`: An array representing the changes in buffs caused by the skill.
+
+- **Methods:**
+  - `applyBuff(member)`: Applies buff changes from the skill to a `Member` object.
+
+#### Sub-Functions
+
+A set of sub-functions includes `Damcounter` and `SkillDam` for simulating the damage calculation process.
+
+### Getting Started
+
+1. **Member Initialization:**
+   - Use the `Member` class to create characters, setting initial Attack power and buffs.
+
+2. **Skill Initialization:**
+   - Create skills using the `Skill` class, defining their properties.
+   - Store skills in a vector to create a sequence for simulation.
+
+3. **Simulation:**
+   - Utilize the `Damcounter` function to simulate the damage calculation process.
+   - View the results for each skill's damage output.
+4. **Tips:**
+   -If you are not good at coding, you can input the value of ATK and other parameters of buffs by txt file, which has the same format with "member_parameters.txt". Sothat, you needn't edit any C++ code.
+   
+### Customization
+
+- Modify the number of buffs or other attributes in the `Member` class.
+- Experiment with different skill properties and sequences.
+- Explore alternative methods for initializing member parameters.
+
+
+
 
 ## Contributing
 Welcome for players who is into the PGR and good at coding simulation programs.
