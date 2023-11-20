@@ -1,7 +1,6 @@
 #     Punishing-Gray-Raven-Numerical-Simulation_PGRNS
 
-[![license](http://www.apache.org/licenses/LICENSE-2.0)](http://www.apache.org/licenses/LICENSE-2.0)
-
+[license](http://www.apache.org/licenses/LICENSE-2.0)
 
 ## About The Project
 
