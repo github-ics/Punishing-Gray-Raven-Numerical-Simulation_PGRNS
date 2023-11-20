@@ -7,7 +7,7 @@
 int main() {
     Member player(100);
     //player.initializeFromExcel("member_parameters.xlsx");
-    player.initializeFromTxt("member_parameters.txt");
+    player.initializeFromTxt("Qiming_parameters.txt");
 
     std::vector<Skill> skills = {
         {1.5, 2, {10.2, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0}},
