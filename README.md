@@ -48,25 +48,25 @@ Now it only depends on C++11.
 
 ## Usage
 
-This C++ project is a simple game damage simulator that allows users to model and simulate damage calculations based on character attributes, buffs, and skills. The project is organized into three main classes: `Member`, `Skill`, and a set of sub-functions.
+
+This C++ project serves as a simple and flexible game damage simulator. Users can model and simulate damage calculations based on character attributes, buffs, and skills. The project is organized into three main classes: `Member`, `Skill`, and a set of sub-functions.
 
 ### Classes Overview
 
 #### `Member` Class
 
-The `Member` class represents a character in the game. It includes attributes such as Attack (ATK) and an array of buffs that can be modified independently. Buffs play a crucial role in determining damage outcomes.
+The `Member` class represents a character in the game, including attributes like Attack (ATK) and an array of buffs that can be independently modified. Buffs play a crucial role in determining damage outcomes.
 
 - **Attributes:**
   - `ATK`: Initial Attack power of the character.
   - `buff`: An array representing different buffs affecting the character.
 
 - **Methods:**
-  - `initializeFromFile(filename)`: Initializes member parameters (ATK and buffs) from a text file.
   - `initializeFromExcel(filename)`: Initializes member parameters (ATK and buffs) from an Excel file.
 
 #### `Skill` Class
 
-The `Skill` class represents a character's skill, including properties such as multiplier, time cost, and buff changes. Skills are stored in a linked list, allowing users to define a sequence of skills for simulation.
+The `Skill` class represents a character's skill, encompassing properties such as multiplier, time cost, and buff changes. Skills are stored in a linked list, allowing users to define a sequence for simulation.
 
 - **Attributes:**
   - `multiplier`: Damage multiplier of the skill.
@@ -82,6 +82,9 @@ A set of sub-functions includes `Damcounter` and `SkillDam` for simulating the d
 
 ### Getting Started
 
+0. **Tips:**
+   -If you are not good at coding, you can input the value of ATK and other parameters of buffs by ".txt" file or excel file, which has the same format with "member_parameters.txt". Sothat, you needn't edit any C++ code.
+
 1. **Member Initialization:**
    - Use the `Member` class to create characters, setting initial Attack power and buffs.
 
@@ -92,15 +95,20 @@ A set of sub-functions includes `Damcounter` and `SkillDam` for simulating the d
 3. **Simulation:**
    - Utilize the `Damcounter` function to simulate the damage calculation process.
    - View the results for each skill's damage output.
-4. **Tips:**
-   -If you are not good at coding, you can input the value of ATK and other parameters of buffs by txt file, which has the same format with "member_parameters.txt". Sothat, you needn't edit any C++ code.
-   
+
 ### Customization
 
 - Modify the number of buffs or other attributes in the `Member` class.
 - Experiment with different skill properties and sequences.
 - Explore alternative methods for initializing member parameters.
 
+### Project Structure
+
+The project is divided into separate files:
+-  1. main() function is in "ProcessSimulator.cpp"
+-  2. Declarate all functions in "SubFunction.h" please
+-  3. The declaration of classes are in the "DataClass.h"
+-  4. New function had better to be placed in a single ".cpp" file, just like "DamageCounter.cpp"
 
 
 
@@ -111,12 +119,8 @@ This project accepts using Ai-assisted programming, but if you directly use tool
 
 Note: If editing the projrct, please push your improvement of program to testBranch!!!
 
->small note:
-> 1. main() function is in "ProcessSimulator.cpp"
-> 2. Declarate all functions in "SubFunction.h" please
-> 3. The declaration of classes are in the "DataClass.h"
-> 4. New function had better to be placed in a single ".cpp" file, just like "DamageCounter.cpp"
-
+>small tips:
+> pay attention to the **Project Structure**
 
 ## License
 
