@@ -1,10 +1,40 @@
-programing terms:
+#programing terms
+
 arrange the comment in code file(may at the end of each version)
 learn about  std:: prefix and decide use it or not
 
-Usage terms:
+##date:11/22
+
+The Cast object will be added to represent resources (time, ball, energy)
+Complete the functions to output DPS (damage per second) curves and analyze and optimize output efficiency.
+Under the constraint of the kill line, pick an optimization algorithm (such as traversal+sorting) is used to optimize the process of a single character based on the priority of resources.
+Simulate the damage output from multiple character cooperation or  "taking turns attacking"(followed by the addition of cast optimization process).
+Establish the Enemy object to represent the remaining buffs on the monster and add the lifespan of the buff.
+Complete functions to simulate damage time distribution, resource utilization, etc. in scenarios, which empllyed the strategy called taking turns attacking.
+
+#Usage terms:
+
 collect data about case Qiming may face to
 input with excel
 built an Android interface, webside, app or api for wechat ?
+using same rows to store one kind of Buff, so each equipment's buffs could be stored in  respective column in one ".xlsx" file 
 
-Building sequence:
+##12.2
+Optimize the process by seeking the approximate solution of the linear equation: 
+1.take the parameters of the skill combination as the column of matrix A, 
+2.use the positive integer sequence vector x to represent the number of times that the combination is used in a process, 
+3.then use the column vector b to represent the optimization goal, 
+   which including resource constraints and the damage and time of the process.
+
+#Building sequence:
+
+The Cast object will be added to represent resources (time, ball, energy)
+Complete the functions to output DPS (damage per second) curves and analyze and optimize output efficiency.
+Under the constraint of the kill line, pick an optimization algorithm (such as traversal+sorting) is used to optimize the process of a single character based on the priority of resources.
+
+##Next stage: Simulate the damage output from multiple character cooperation or  (followed by the addition of cast optimization process).
+
+The final step in the existing plan: establish the Enemy object to represent the remaining buffs on the monster and add the lifespan of the buff.
+Complete functions to simulate damage time distribution, resource utilization, etc. in scenarios, which empllyed the strategy called taking turns attacking.
+
+#Completed works:

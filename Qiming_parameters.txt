@@ -1,13 +1,15 @@
 1915
-10
-10
-10
-10
-10
-10
-10
+58
+0
+32
+15
+30.59
+0
+0
 
-------------
+
+/*
+The format of each parameter（only consider the character's part in this file）:
 ATK
 Buff1
 .
@@ -15,3 +17,22 @@ Buff1
 .
 .
 Buff7
+
+
+About the buff meaning（form库街区-圈儿）:
+    buff[0];//Attack power percentage bonus 
+    buff[1];//Attack power value bonus
+    buff[2];//Attribute damage bonus zone
+    buff[3];//Attribute Resistance Ride Zone Trial Zone 0.7605
+    buff[4];//Additional damage bonus zone
+    buff[5];//Additional Damage Reduction Ride Zone Trial Zone 0.9605
+    buff[6];//Weakness increases damage in the passenger Zone, such as fragile and flammable
+Buff含义中文版（来源：库街区-圈儿）：
+   a[1]=1.0000+member.buff[0];//攻击力百分比加成
+   x    =member.buff[1];//攻击力数值加成
+   a[3]=1.0000+member.buff[2];//属性伤害加成乘区
+   a[4]=1.0000+member.buff[3];//属性抗性乘区 试玩区0.7605
+   a[5]=1.0000+member.buff[4];//额外伤害加成乘区
+   a[6]=1.0000+member.buff[5];//额外伤害减免乘区 试玩区0.9605
+   a[7]=1.0000+member.buff[6];//弱点增伤乘区，脆弱易燃……
+*/
