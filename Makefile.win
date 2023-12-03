@@ -1,0 +1,31 @@
+# Project: PunishProcessSimulation
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = DamageCounter.o ProcessSimulator.o
+LINKOBJ  = DamageCounter.o ProcessSimulator.o
+LIBS     = -L"D:/MyProgram/DEVcpp/Dev-Cpp/MinGW64/lib" -L"D:/MyProgram/DEVcpp/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"D:/MyProgram/DEVcpp/Dev-Cpp/MinGW64/include" -I"D:/MyProgram/DEVcpp/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/MyProgram/DEVcpp/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/MyProgram/DEVcpp/Dev-Cpp/MinGW64/include" -I"D:/MyProgram/DEVcpp/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/MyProgram/DEVcpp/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/MyProgram/DEVcpp/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = PunishProcessSimulation.exe
+CXXFLAGS = $(CXXINCS) -g3 -std=c++11
+CFLAGS   = $(INCS) -g3 -std=c++11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+DamageCounter.o: DamageCounter.cpp
+	$(CPP) -c DamageCounter.cpp -o DamageCounter.o $(CXXFLAGS)
+
+ProcessSimulator.o: ProcessSimulator.cpp
+	$(CPP) -c ProcessSimulator.cpp -o ProcessSimulator.o $(CXXFLAGS)

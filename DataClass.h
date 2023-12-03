@@ -12,7 +12,7 @@ public:
     std::vector<double> buff;
 
     Member(int initialATK) : ATK(initialATK) {
-        buff = {1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0};
+        buff = {1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0};
     }
 
     //void initializeFromExcel(const std::string& filename);
@@ -108,13 +108,26 @@ public:
 	//the reason I dont't provide the Constructor for skill: For non aggregates (non aggregate objects), initialization lists cannot be used
     //Skill(double multi, int cost, std::vector<double>& buffChange) : multiplier(multi), timeCost(cost), buffChange(buffChange) {}
 
-    void applyBuff(Member& member) {
+    Member applyBuff(Member& member) {
+    	Member Now(member.ATK);
 	    // Apply buff changes from the skill to the member
 	    for (std::size_t i = 0; i < buffChange.size(); ++i) {
-	        member.buff[i] = buffChange[i];
+	        Now.buff[i] = member.buff[i]+buffChange[i];
 	    }
+	    return Now;
 	} 
 };
 
 
 #endif // DATACLASS_H
+
+/*
+About the buff meaning:
+    buff[0];//Attack power percentage bonus 
+    buff[1];//Attack power value bonus
+    buff[2];//Attribute damage bonus zone
+    buff[3];//Attribute Resistance Ride Zone Trial Zone 0.7605
+    buff[4];//Additional damage bonus zone
+    buff[5];//Additional Damage Reduction Ride Zone Trial Zone 0.9605
+    buff[6];//Weakness increases damage in the passenger area, such as fragile and flammable
+*/
