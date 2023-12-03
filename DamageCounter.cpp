@@ -9,14 +9,14 @@ int SkillDam(Member& member, Skill skill) {
     BRA = 2.5;//Basic damage bonus zone
     c = floor(Rate2 * BRA * Double);//10000 times magnification
 
-    a[1] = member.buff[0];//Attack power percentage bonus 
+    a[1] = 1.0000+member.buff[0]/100;//Attack power percentage bonus 
     x = member.buff[1];//Attack power value bonus
-    a[2] = c / 10000;//Final magnification related to ATK
-    a[3] = member.buff[2];//Attribute damage bonus zone
-    a[4] = member.buff[3];//Attribute Resistance Ride Zone Trial Zone 0.7605
-    a[5] = member.buff[4];//Additional damage bonus zone
-    a[6] = member.buff[5];//Additional Damage Reduction Ride Zone Trial Zone 0.9605
-    a[7] = member.buff[6];//Weakness increases damage in the passenger area, such as fragile and flammable
+    a[2] = c / 10000;//Final magnification related to value of ATK
+    a[3] = 1.0000+member.buff[2]/100;//Attribute damage bonus Zone
+    a[4] = 1.0000+member.buff[3]/100;//Attribute Resistance Ride Zone, Trial Zone a[4]=0.7605
+    a[5] = 1.0000+member.buff[4]/100;//Additional damage bonus Zone
+    a[6] = 1.0000+member.buff[5]/100;//Additional Damage Reduction Ride Zone, Trial Zone a[6]0.9605
+    a[7] = 1.0000+member.buff[6]/100;//Weakness increases damage in the passenger Zone, such as fragile and flammable
 
     sum = member.ATK;
     for (i = 1; i < 7; i++) {
@@ -32,7 +32,8 @@ int SkillDam(Member& member, Skill skill) {
 
 void Damcounter(Member& member, std::vector<Skill>& process, const int steps, std::vector<int>& Damage) {
     for (int i = 0; i < steps; ++i) {
-        process[i].applyBuff(member);
-        Damage[i] = SkillDam(member, process[i]);
+    	//applys buffs on character
+    	Member case_now=process[i].applyBuff(member);//this version does not consider about lifetime of buffs
+        Damage[i] = SkillDam(case_now, process[i]);
     }
 }
