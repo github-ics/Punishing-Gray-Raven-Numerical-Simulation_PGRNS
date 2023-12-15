@@ -120,7 +120,7 @@ This project accepts using Ai-assisted programming, but if you directly use tool
 Note: If editing the projrct, please push your improvement of program to testBranch!!!
 
 >small tips:
-> pay attention to the **Project Structure**
+> pay attention to the **Project Structure**.
 
 ## License
 
